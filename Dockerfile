@@ -52,13 +52,13 @@ WORKDIR /var/www/wp-content
 RUN chown -R nobody.nobody /var/www
 
 # WordPress
-ENV WORDPRESS_VERSION 6.5
+ENV WORDPRESS_VERSION 6.5.3
 ENV WORDPRESS_SHA1 fe10ab388318fa5a0085aff48b2b7590cf8b93f9
 
 RUN mkdir -p /usr/src
 
 # Upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
-RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz \
+RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-6.5.3.tar.gz \
   && echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c - \
   && tar -xzf wordpress.tar.gz -C /usr/src/ \
   && rm wordpress.tar.gz \
