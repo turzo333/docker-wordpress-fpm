@@ -53,7 +53,7 @@ RUN chown -R nobody.nobody /var/www
 
 # WordPress
 ENV WORDPRESS_VERSION 6.5.3
-ENV WORDPRESS_SHA1 fe10ab388318fa5a0085aff48b2b7590cf8b93f9
+ENV WORDPRESS_SHA1 8e4950d39990a2c200a7745d44d32b176baa5ac5
 
 RUN mkdir -p /usr/src
 
